@@ -1,0 +1,5 @@
+CREATE TABLE occupancy (
+    id INTEGER PRIMARY KEY,
+    count INTEGER
+);
+INSERT INTO occupancy (count) VALUES (0);

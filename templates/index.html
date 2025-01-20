@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Occupancy Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Real-Time Store Occupancy Tracker</h1>
+    <div class="container">
+        <!-- Display the real-time video feed -->
+        <img src="{{ url_for('video_feed') }}" id="video-stream">
+        
+        <!-- Display the current occupancy and alert -->
+        <div class="info">
+            <h2>Current Occupancy: <span id="occupancy-count">0</span></h2>
+            <h3>Maximum Allowed: <span id="max-occupancy">5</span></h3>
+            <h3 id="alert" class="hidden">⚠️ Maximum Occupancy Reached!</h3>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
