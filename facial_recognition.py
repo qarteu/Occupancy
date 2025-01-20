@@ -15,7 +15,7 @@ camera = cv2.VideoCapture(0)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 eyes_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_eye.xml')
 
-MAX_OCCUPANCY = 5
+MAX_OCCUPANCY = 500
 current_occupancy = 0
 face_encodings_list = deque(maxlen=100)
 
